@@ -1,35 +1,76 @@
 @import 'variables.scss';
 
-//--- Buttons ----//
+//--- Natives Elements (h1, h2, h3, div ...) ----//
+
+h1 {
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+  color: $text;
+  border-bottom: 1px solid $text;
+  padding-bottom: 15px;
+}
+
+//--- React-materialize Elements (Button, Row, Col...) ----//
 
 .btn {
-  background-color: $monkeyHair;
-  color: $monkeySkin;
+  background-color: $btn;
+  color: $white;
 
   &:hover, &:focus {
-    background-color: $monkeyHair_40;
+    background-color: $btnFocus;
   }
 }
 
-//--- Header ---//
+.shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  padding: {
+    top: 10px;
+    left: 30px;
+    bottom: 10px;
+    right: 30px;
+  }
+}
+
+.dropdown-content {
+  li {
+    a, span {
+      font-size: 14px;
+      color: $text;
+      display: block;
+      line-height: 22px;
+    }
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after {
+  background-color: $btn;
+  border: $btn;
+}
+
+[type="checkbox"].filled-in:checked+label:after {
+  border: 2px solid $btn;
+  background-color: $btn;
+}
+
+//--- Home ---//
 
 .header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  .speedy {
-    height: 30vmin;
-    align-items: center;
-    justify-content: center;
-  }
+  position: absolute;
+  right: 38px;
+  margin-top: 48px;
 
  .col {
    display: inline-block;
-   color: $monkeySkin;
+   color: $white;
    font-family: $source-sans-pro;
-   font-size: 18px;
+   font-size: 14px;
+   letter-spacing: 0.1em;
    text-decoration: none;
    cursor: pointer;
    text-transform: uppercase;
@@ -38,9 +79,9 @@
      content: '';
      display: block;
      width: 0;
-     height: 3px;
-     background: $monkeySkin;
-     transition: width .5s;
+     height: 2px;
+     background: $white;
+     transition: width .4s;
    }
 
    &:hover::after {
@@ -49,3 +90,11 @@
  }
 
 }
+
+.logo {
+  height: 10vmin;
+  position: absolute;
+  left: 15px;
+  margin-top: 25px;
+}
+

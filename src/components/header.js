@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
-import Speedy from '../../src/assets/img/speedy.svg';
 import { Row, Col } from 'react-materialize';
+import Speedy from "../assets/img/logo.svg";
 
 class Header extends Component {
     render() {
         return(
-            <div className="header">
-                <img src={ Speedy } alt="Speedy" className="speedy"/>
-                <Row>
-                    <Col>Concept</Col>
-                    <Col>Solutions</Col>
-                    <Col>Réalisations</Col>
-                    <Col>Blog</Col>
-                    <Col>Faire un Devis</Col>
-                </Row>
+            <div>
+                <img src={Speedy} alt="Speedmonkey" className="logo"/>
+                <div className="header">
+                    <Row>
+                        <Col>Concept</Col>
+                        <Col>Solutions</Col>
+                        <Col>Réalisations</Col>
+                        <Col>Blog</Col>
+                        <Col>Faire un Devis</Col>
+                    </Row>
+                </div>
             </div>
         )
     }
