@@ -3,7 +3,7 @@
 //--- Natives Elements (h1, h2, h3, div ...) ----//
 
 h1 {
-  font-size: 30px;
+  font-size: 6vmin;
   font-weight: 300;
   text-align: center;
   color: $text;
@@ -58,6 +58,17 @@ h1 {
   background-color: $btn;
 }
 
+[type="checkbox"].filled-in+label:after {
+  margin: 2.5px;
+}
+
+[type="checkbox"]+label:before, [type="checkbox"]:not(.filled-in)+label:after {
+  margin: {
+    top: 4.5px;
+    left: 2.5px;
+  }
+}
+
 //--- Home ---//
 
 .header {
@@ -92,7 +103,7 @@ h1 {
 }
 
 .logo {
-  height: 10vmin;
+  height: 70px;
   position: absolute;
   left: 15px;
   margin-top: 25px;
