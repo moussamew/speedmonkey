@@ -1,0 +1,54 @@
+@import '../variables';
+
+.header {
+  position: absolute;
+  right: 38px;
+  margin-top: 48px;
+
+  .col {
+    display: inline-block;
+    color: $white;
+    font-family: $source-sans-pro;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: $white;
+      transition: width .4s;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+}
+
+.logo {
+  height: 70px;
+  position: absolute;
+  left: 15px;
+  margin-top: 25px;
+
+  @media (max-width: 800px) {
+    height: 50px;
+  }
+}
+
+.hamburger {
+  position: absolute;
+  right: 38px;
+  margin-top: 48px;
+
+  @media (max-width: 800px) {
+    margin-top: 38px;
+    right: 30px;
+  }
+}

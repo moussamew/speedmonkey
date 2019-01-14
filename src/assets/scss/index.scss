@@ -69,43 +69,25 @@ h1 {
   }
 }
 
-//--- Home ---//
+//--- Medias Queries ----//
 
-.header {
-  position: absolute;
-  right: 38px;
-  margin-top: 48px;
+// Set Defaults
+.desktop-visible, .mobile-visible { display:none; }
 
- .col {
-   display: inline-block;
-   color: $white;
-   font-family: $source-sans-pro;
-   font-size: 14px;
-   letter-spacing: 0.1em;
-   text-decoration: none;
-   cursor: pointer;
-   text-transform: uppercase;
+// Desktop and landscape tablets
+@media (min-width: 800px) {
 
-   &::after {
-     content: '';
-     display: block;
-     width: 0;
-     height: 2px;
-     background: $white;
-     transition: width .4s;
-   }
-
-   &:hover::after {
-     width: 100%;
-   }
- }
-
+  .desktop-visible {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
-.logo {
-  height: 70px;
-  position: absolute;
-  left: 15px;
-  margin-top: 25px;
-}
+// Portrait tablets and landscape mobiles
+@media (max-width: 800px) {
 
+  .mobile-visible {
+    display: block;
+    margin: 0 auto;
+  }
+}
