@@ -5,6 +5,24 @@ import { Col, Row, Input, Button } from "react-materialize";
 
 
 class Welcome extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            project: '',
+            site: '',
+            time: '',
+            money: ''
+        };
+
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(event, value) {
+        this.setState({
+            [value]: event.target.options[event.target.selectedIndex].text,
+        });
+    }
+
     render() {
         return(
             <div>
@@ -15,13 +33,13 @@ class Welcome extends Component {
                             <div className="shadow devis">
                                 <h1>Simulation de devis</h1>
                                 <Row>
-                                    <Input s={12} m={6} type='select' label='Type de projet' icon='person_pin' defaultValue='1'>
+                                    <Input s={12} m={6} type='select' label='Type de projet' icon='person_pin' defaultValue="1" onChange={(e) => this.handleChange(e, "project")}>
                                         <option value='1'>Personnel</option>
                                         <option value='2'>Professionnel</option>
                                         <option value='3'>Associatif</option>
                                         <option value='4'>Autre</option>
                                     </Input>
-                                    <Input s={12} m={6} type='select' label="Étude du besoin" icon='public' defaultValue='1'>
+                                    <Input s={12} m={6} type='select' label="Étude du besoin" icon='public' defaultValue="1" onChange={(e) => this.handleChange(e, "site")}>
                                         <option value='1'>Site Internet Vitrine</option>
                                         <option value='2'>Site Internet Blog</option>
                                         <option value='3'>Site Internet E-Commerce</option>
@@ -52,13 +70,13 @@ class Welcome extends Component {
                                     </Col>
                                 </Row>
                                 <Row>
-                                    <Input s={12} m={6} type='select' label='Délai de réalisation' icon='timer' defaultValue='1'>
+                                    <Input s={12} m={6} type='select' label='Délai de réalisation' icon='timer' defaultValue="1" onChange={(e) => this.handleChange(e, "time")}>
                                         <option value='1'>Urgent</option>
                                         <option value='2'>Mois d'un mois</option>
                                         <option value='3'>Moins de 3 mois</option>
                                         <option value='4'>Moins d'un an</option>
                                     </Input>
-                                    <Input s={12} m={6} type='select' label="Montant du budget" icon='euro_symbol' defaultValue='1'>
+                                    <Input s={12} m={6} type='select' label="Montant du budget" icon='euro_symbol' defaultValue="1" onChange={(e) => this.handleChange(e, "money")}>
                                         <option value='1'>Moins de 500 €</option>
                                         <option value='2'>Entre 500€ et 1000€</option>
                                         <option value='3'>Entre 1000€ et 2000€</option>
