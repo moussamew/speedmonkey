@@ -48,6 +48,10 @@ h1 {
   text-align: center;
 }
 
+.hidden {
+  display: none;
+}
+
 [type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after {
   background-color: $btn;
   border: $btn;
@@ -90,4 +94,19 @@ h1 {
     display: block;
     margin: 0 auto;
   }
+}
+
+//--- CSS Animations ----//
+
+// Fade-In Effect
+
+.fade-in {
+  animation-name: fade-in;
+  animation-fill-mode: both;
+  animation-duration: .4s;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }

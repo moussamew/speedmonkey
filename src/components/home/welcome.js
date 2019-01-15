@@ -12,7 +12,7 @@ class Welcome extends Component {
                     <Header/>
                     <Row>
                         <Col m={10} l={5}  offset="m1 l1">
-                            <div className="shadow devis block">
+                            <div className="shadow devis">
                                 <h1>Simulation de devis</h1>
                                 <Row>
                                     <Input s={12} m={6} type='select' label='Type de projet' icon='person_pin' defaultValue='1'>
@@ -31,7 +31,7 @@ class Welcome extends Component {
                                     </Input>
                                 </Row>
                                 <Row className="row-with-p">
-                                    <Col s={12} m={7}><p> <i className="material-icons">cloud_circle</i>Avez-vous un hébergement web ?</p></Col>
+                                    <Col s={12} m={7}><p> <i className="material-icons">filter_drama</i>Avez-vous un hébergement web ?</p></Col>
                                     <Col s={12} m={5} offset="s1">
                                         <Input s={4} m={6} name='group1' type='radio' value='yesHosting' label='Oui' />
                                         <Input s={4} m={6} name='group1' type='radio' value='noHoSting' label='Non' />

@@ -17,11 +17,12 @@ $white: #fff;
 
 $text: #484848;
 
-//---- Colors ----//
+//---- Elements (Buttons, Borders, ...) ----//
 
 $btn: #FF4450;
 $btnFocus: #ff6b6f;
-
+$border: rgba(77,41,16,.1);
+$tabActive: rgba(255,217,186, .3);
 
 
 //---- Font Family ----//
@@ -29,3 +30,4 @@ $btnFocus: #ff6b6f;
 $roboto: 'Roboto', sans-serif;
 $source-sans-pro: 'Source Sans Pro', sans-serif;
 $thasadith: 'Thasadith', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
