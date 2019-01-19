@@ -5,7 +5,8 @@
   right: 38px;
   margin-top: 48px;
 
-  .col {
+  a {
+    padding-left: 20px;
     display: inline-block;
     color: $white;
     font-family: $source-sans-pro;
@@ -67,31 +68,17 @@
   }
 
   h1 {
-
-    &:first-child {
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-    }
-
-    margin: {
-      top: 0 !important;
-      bottom: 20px;
-    }
-
+    text-align: center;
+    color: $text;
+    border-bottom: 1px solid $border;
     font-size: 16px;
     font-weight: 700;
-    color: $text;
     font-family: $montserrat;
     text-transform: uppercase;
     border-bottom: none;
-    padding-bottom: 10px;
-    padding-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid $border;
 
-    &:not(:last-child) {
-      border-bottom: 1px solid $border;
-      padding-bottom: 20px;
-      margin-bottom: 0;
-    }
 
     i {
       position: absolute;
@@ -101,7 +88,19 @@
     }
   }
 
+  .first {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .last {
+    padding-bottom: 10px;
+    border: none;
+  }
+
   .selected {
     background: $tabActive;
+    box-shadow: 0 0 $tabActive,
+    0 -30px $tabActive;
   }
 }
