@@ -1,16 +1,5 @@
 @import 'variables.scss';
 
-//--- Natives Elements (h1, h2, h3, div ...) ----//
-
-h1 {
-  font-size: 6vmin;
-  font-weight: 300;
-  text-align: center;
-  color: $text;
-  border-bottom: 1px solid $text;
-  padding-bottom: 15px;
-}
-
 //--- React-materialize Elements (Button, Row, Col...) ----//
 
 .btn {

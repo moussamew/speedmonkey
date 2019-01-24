@@ -5,7 +5,7 @@ import Header from "./header";
 import Error from "./error";
 import '../assets/scss/home/welcome.scss';
 
-const Test = () => {
+const Solutions = () => {
     return(
         <div className="bg-test">
             <Header />
@@ -19,7 +19,7 @@ class App extends Component {
             <BrowserRouter>
                 <Switch>
                     <Route path="/" component={Home} exact />
-                    <Route path="/test" component={Test} />
+                    <Route path="/solutions" component={Solutions} />
                     <Route component={Error} />
                 </Switch>
             </BrowserRouter>
