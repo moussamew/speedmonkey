@@ -4,7 +4,7 @@ import './assets/scss/index.scss';
 import Coming from './components/coming';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<Coming />, document.getElementById('app'));
+ReactDOM.render(<Coming />, document.getElementById('coming'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

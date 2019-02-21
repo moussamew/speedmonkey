@@ -67,6 +67,8 @@
 // Set Defaults
 .desktop-visible, .mobile-visible { display:none; }
 
+.hidden { display: none; }
+
 // Desktop and landscape tablets
 @media (min-width: 800px) {
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../assets/scss/header.scss';
 import { Row } from 'react-materialize';
-import { NavLink, withRouter } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Speedy from "../assets/img/logo.svg";
 import HamburgerMenu from "react-hamburger-menu";
 
@@ -65,4 +65,4 @@ class Header extends Component {
     }
 }
 
-export default withRouter( props => <Header {...props} />);
+export default Header;

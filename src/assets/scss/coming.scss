@@ -1,0 +1,50 @@
+@import 'variables';
+
+body {
+  background-color: $background-color;
+}
+
+.coming-soon {
+  margin-top: 25px;
+  text-align: center;
+  padding: 15px;
+  color: $white;
+
+  img {
+    height: 20vw;
+    display: block;
+    margin: auto;
+  }
+
+  h1, h2 {
+    font-size: 20px;
+    color: $white;
+    font-family: $open-sans-condensed;
+    font-weight: 300;
+  }
+
+  input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid $monkeySkin;
+    box-shadow: 0 1px 0 0 $monkeySkin;
+
+    &+label {
+      color: $monkeySkin;
+    }
+  }
+
+  .btn {
+    background-color: $green900;
+  }
+
+  .error-mail {
+    p {
+      color: $red;
+    }
+  }
+
+  .success-mail {
+    p {
+      color: $green900;
+    }
+  }
+}
