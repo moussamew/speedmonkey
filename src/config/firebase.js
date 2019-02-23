@@ -1,4 +1,5 @@
-import * as firebase from 'firebase';
+import firebase from 'firebase/app';
+require('firebase/database');
 
 const config = {
   apiKey: "AIzaSyCieWS9sFbIqtcKknEi3xKuLPOynBs1-Iw",

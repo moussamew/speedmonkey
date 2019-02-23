@@ -5,8 +5,8 @@ import Speedy from '../assets/img/logo.svg';
 import btnMail from '../assets/img/mail.svg';
 import { Row, Input, Col, Button } from 'react-materialize';
 import { database } from '../config/firebase';
-import * as firebase from 'firebase';
-
+import firebase from 'firebase/app';
+require('firebase/database');
 
 class Coming extends Component {
   constructor(props) {
@@ -98,13 +98,13 @@ class Coming extends Component {
           <Button s={10} waves='light' onClick={this.handleMail}>S'abonner</Button>
         </Row>
         <div className={this.state.message  === 'error' ? 'error-mail' : 'hidden'}>
-            <p>Votre adresse mail n'est pas valide.</p>
+            <p>Votre adresse mail n'est pas valide !</p>
         </div>
         <div className={this.state.message  === 'mailExist' ? 'error-mail' : 'hidden'}>
             <p>Votre adresse mail existe déjà chez nous !</p>
         </div>
         <div className={this.state.message === 'success' ? 'success-mail' : 'hidden'}>
-            <p>Votre adresse mail <strong>{this.state.mail}</strong> a bien été enregistré, nous vous contacterons dès l'ouverture du site.</p>
+            <p>Merci ! Nous vous contacterons prochainement !</p>
         </div>
         <div className="btn-mail">
           <a href="mailto:hello@speedmonkey.fr">
