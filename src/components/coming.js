@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../assets/scss/coming.scss';
-import '../assets/scss/loader.scss';
 import Speedy from '../assets/img/logo.svg';
 import btnMail from '../assets/img/mail.svg';
 import { Row, Input, Col, Button } from 'react-materialize';
@@ -36,32 +35,21 @@ class Coming extends Component {
   }
 
   handleMail = (e) => {
-    var userMail = this.state.mail;
-    var mailExist = false;
+    var userMail = this.state.mail.toLowerCase();
     var regEx = new RegExp("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$");
 
     // Vérifier si le champs texte est bel est bien une adresse mail
     if (regEx.test(userMail)) {
       // Vérifier si l'adresse mail existe déjà en base de données
-      firebase.database().ref().child("mails").orderByChild("mail").equalTo(userMail).on("value", function(snapshot) {
-        if (snapshot.exists()) { mailExist = true; }
-        else {
+      firebase.database().ref().child("mails").orderByChild("mail").equalTo(userMail).once("value").then((snapshot) => {
+        if (snapshot.exists()) {
+          this.setState({ message: 'mailExist'})
+        } else {
           const postmail = { mail: userMail };
           database.push(postmail);
-          mailExist = false;
+          this.setState({ message: 'success'})
         }
-      });
-
-      // Afficher message d'erreur ou de succes si l'adresse mail existe en base de données ou non
-      if(mailExist) {
-        this.setState({
-          message: 'mailExist'
-        })
-      } else {
-        this.setState({
-          message: 'success'
-        })
-      }
+      })
 
     } else {
       this.setState({
