@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../assets/scss/coming.scss';
 import Speedy from '../assets/img/logo.svg';
-import btnMail from '../assets/img/mail.svg';
 import { Row, Input, Col, Button } from 'react-materialize';
 import { database } from '../config/firebase';
 import firebase from 'firebase/app';
@@ -93,11 +92,6 @@ class Coming extends Component {
         </div>
         <div className={this.state.message === 'success' ? 'success-mail' : 'hidden'}>
             <p>Merci ! Nous vous contacterons prochainement !</p>
-        </div>
-        <div className="btn-mail">
-          <a href="mailto:hello@speedmonkey.fr">
-      			<img src={btnMail} alt="Envoyez moi un mail"/>
-      		</a>
         </div>
 
       </div>
