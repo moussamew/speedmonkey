@@ -1,4 +1,5 @@
-@import 'variables';
+@import '../imports/variables';
+@import '../imports/fonts';
 
 body {
   background-color: $white
@@ -7,10 +8,68 @@ body {
 .header {
 
   .logo {
-    height: 35px;
+    height: 2vw;
     position: absolute;
-    left: 15px;
-    margin-top: 15px;
+    left: 25px;
+    top: 25px;
+
+    @media (max-width: 1024px) {
+      height: 5vw;
+    }
+  }
+
+  .navigation {
+    position: absolute;
+    right: 25px;
+    top: 16px;
+
+    h1 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-left: 20px;
+      font-family: $source-sans-pro;
+      text-transform: uppercase;
+      color: $nav;
+      cursor: pointer;
+      display: inline-block;
+
+      &:hover {
+        color: $title;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $title;
+        transition: width .4s;
+        margin-top: 2px;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+
+    }
+
+    button {
+      margin-left: 20px;
+      font-size: 14px;
+      height: 34px;
+      padding: {
+        left: 10px;
+        right: 10px;
+      }
+      font-weight: 700;
+      font-family: $source-sans-pro;
+      text-transform: uppercase;
+      color: $white;
+      background: $green;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+    }
   }
 
 }
