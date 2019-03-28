@@ -9,9 +9,9 @@ class Header extends Component {
         <div className="header">
           <img src={Logo} alt="SpeedMonkey" className="logo"/>
           <div className="navigation">
-            <h1>Réalisations</h1>
-            <h1>Explorer le site</h1>
-            <button>Simuler son devis</button>
+            <h1 className="header">Réalisations</h1>
+            <h1 className="header">Explorer le site</h1>
+            <a href="/" className="button hvr-wobble-horizontal">Simuler son devis</a>
           </div>
         </div>
       </div>
