@@ -7,11 +7,11 @@ class Header extends Component {
     return (
       <div>
         <div className="header">
-          <img src={Logo} alt="SpeedMonkey" className="logo"/>
+          <img src={Logo} alt="SpeedMonkey" className="logo hvr-wobble-vertical"/>
           <div className="navigation">
             <h1 className="header">Réalisations</h1>
             <h1 className="header">Explorer le site</h1>
-            <a href="/" className="button hvr-wobble-horizontal">Simuler son devis</a>
+            <a href="/" className="button btn-nav hvr-wobble-horizontal">Simuler son devis</a>
           </div>
         </div>
       </div>
