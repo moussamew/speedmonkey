@@ -2,8 +2,11 @@
 @import '../imports/fonts';
 @import '../imports/animate';
 
+
+// Styles pour la Home //
+
 .home {
-  margin-top: 160px;
+  margin-top: 150px;
 
   h1 {
     font-size: 26px;
@@ -13,11 +16,45 @@
     font-weight: 500;
   }
 
+  h2 {
+    margin-top: 5px;
+    font-size: 26px;
+    font-family: 'Speedy' sans-serif;
+    color: $title;
+    font-weight: 700;
+  }
+
+  img { margin-top: 15px; }
+
+  .span-red { color: $red; }
+
+  .btn-red { background: $red; }
+
+  .span-purple { color: $purple; }
+
+  .btn-purple { background: $purple; }
+
+  .span-green { color: $greenSection; }
+
+  .btn-green { background: $greenSection; }
+
   .btn-home {
     padding-bottom: 50px;
     padding-left: 25px;
     padding-right: 25px;
     font-size: 22px;
+  }
+
+  .btn-section {
+    font-size: 15px;
+    text-transform: none;
+    font-weight: 650;
+    padding: {
+      bottom: 35px;
+      right: 50px;
+      left: 25px;
+      top: 12px;
+    }
   }
 
   .description {
@@ -30,71 +67,65 @@
     font-size: 14px;
   }
 
-  .website {
-    height: 300px;
-    margin-top: -20px;
-  }
+  .illustration { height: 300px; }
+
 }
+
+ // Liste des plus récentes technologies sous forme d'icones //
 
 .technology {
   margin-top: 50px;
   img { height: 50px; }
-  p { color: $text; }
+  p { color: $white; }
 
   .shopify {
     img:hover { content: url('../img/technology/shopifySelected.svg'); }
-    p { display: none; }
     margin-top: 10px;
   }
 
   .react {
     img:hover { content: url('../img/technology/reactSelected.svg'); }
-    p { display: none; }
     margin-top: 10px;
   }
 
   .wordpress {
     img:hover { content: url('../img/technology/wordpressSelected.svg'); }
-    p { display: none; }
     margin-top: 10px;
   }
 
   .vue {
     img:hover { content: url('../img/technology/vueSelected.svg'); }
-    p { display: none; }
     margin-top: 10px;
   }
 
   .prestashop {
-    img:hover { content: url('../img/technology/prestashopSelected.svg'); height: 66px; margin-top: -4px;}
-    p { display: none; }
+    img:hover { content: url('../img/technology/prestashopSelected.svg'); height: 64px; margin-top: -4px;}
     margin-top: 10px;
   }
 
   .angular {
     img:hover { content: url('../img/technology/angularSelected.svg'); }
-    p { display: none; }
     margin-top: 10px;
   }
 
   .drupal {
     img:hover { content: url('../img/technology/drupalSelected.svg'); }
-    p { display: none; }
     margin-top: 10px;
   }
 
   .symfony {
     img:hover { content: url('../img/technology/symfonySelected.svg'); }
-    p { display: none; }
     margin-top: 10px;
   }
 
   .selected {
+    cursor: pointer;
     p {
       display: block;
       color: $text;
-      font-size: 14px;
      }
   }
 
 }
+
+//
