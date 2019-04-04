@@ -1,20 +1,32 @@
 import React, { Component } from 'react';
 import Suivi from '../../assets/img/avantages/build.svg';
 import SuiviSelected from '../../assets/img/avantages/buildSelected.svg';
+import Technology from '../../assets/img/avantages/technology.svg';
+import TechnologySelected from '../../assets/img/avantages/technologySelected.svg';
+import Database from '../../assets/img/avantages/database.svg';
+import DatabaseSelected from '../../assets/img/avantages/databaseSelected.svg';
 
 
 class Avantages extends Component {
   constructor(props){
     super(props);
     this.state = {
-      suivi: false
+      suivi: false,
+      technology: false,
+      database: false
     }
 
     this.hoverSuivi = this.hoverSuivi.bind(this);
+    this.hoverTechnology = this.hoverTechnology.bind(this);
+    this.hoverDatabase = this.hoverDatabase.bind(this);
 
   }
 
   hoverSuivi(){ this.setState({ suivi: !this.state.suivi }) }
+
+  hoverTechnology() { this.setState({ technology: !this.state.technology })}
+
+  hoverDatabase() { this.setState({ database: !this.state.database }) }
 
   render(){
 
@@ -27,14 +39,16 @@ class Avantages extends Component {
               <img src={this.state.suivi ? SuiviSelected : Suivi } alt="Suivi personnalisé"/>
               <p>Accompagnement et suivi personnalisé de votre projet.</p>
             </div>
-            <div className="col s2 box">
-              <p>Accompagnement et suivi personnalisé de votre projet.</p>
+            <div className="col s2 box" onMouseEnter={this.hoverTechnology} onMouseLeave={this.hoverTechnology}>
+              <img src={this.state.technology ? TechnologySelected : Technology } alt="Technologies récentes"/>
+              <p>Technologies récentes et adaptés à votre projet web.</p>
+            </div>
+            <div className="col s2 box" onMouseEnter={this.hoverDatabase} onMouseLeave={this.hoverDatabase}>
+              <img src={this.state.database ? DatabaseSelected : Database } alt="Serveurs sécurisés"/>
+              <p>Serveurs réactifs, sécurisés et hébergés en France.</p>
             </div>
             <div className="col s2 box">
-              <p>Accompagnement et suivi personnalisé de votre projet.</p>
-            </div>
-            <div className="col s2 box">
-              <p>Accompagnement et suivi personnalisé de votre projet.</p>
+              <p>Formules .</p>
             </div>
           </div>
           <div className="mt100"></div>
