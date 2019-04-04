@@ -2,7 +2,7 @@
 @import '../imports/fonts';
 @import '../imports/animate';
 
-body { background-color: $white }
+body { background-color: $romance; }
 
 a { text-decoration: none; }
 
@@ -10,9 +10,11 @@ p { color: $title; }
 
 .bg-blue { background-color: $bg-blue; }
 
+.bg-white { background-color: $white; }
+
 .icon { position: absolute; margin-left: 10px; }
 
-.row { margin-bottom: 0px; }
+.row { margin-bottom: 0px !important; }
 
 // MARGIN-TOP (+) //
 

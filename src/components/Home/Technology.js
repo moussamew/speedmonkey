@@ -60,7 +60,7 @@ class Technology extends Component {
     const symfonySelected = this.state.symfony ? "selected symfony col s1" : "symfony col s1";
 
     return (
-      <div className="row">
+      <div className="row mt80">
         <div className="technology center">
           <p>Nous maîtrisons les plus récentes technologies pour répondre toujours plus efficacement à vos besoins.</p>
           <div className={shopifySelected}>

@@ -36,6 +36,8 @@
 
   .span-green { color: $greenSection; }
 
+  .span-green-home { color: $green; }
+
   .btn-green { background: $greenSection; }
 
   .btn-home {
@@ -77,6 +79,7 @@
   margin-top: 50px;
   img { height: 50px; }
   p { color: $white; }
+  p:first-child { color: $text; }
 
   .shopify {
     img:hover { content: url('../img/technology/shopifySelected.svg'); }
@@ -128,4 +131,27 @@
 
 }
 
-//
+// Section avantages
+
+.avantages {
+
+  span { margin-left: 40px; }
+
+  img { height: 100px; padding-top: 15px !important; }
+
+  .box {
+    box-shadow: 0 14px 30px 0 rgba(28, 60, 125, 0.04);
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: $white;
+    margin-right: 20px !important;
+    padding: 15px !important;
+    p { color: $text; font-size: 14px; }
+
+    &:hover {
+      p { color: $title;}
+      box-shadow: 0 14px 30px 0 rgba(14, 49, 121, 0.1);
+      transform: translateY(-3px);
+    }
+  }
+}
