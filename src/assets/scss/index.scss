@@ -1,16 +1,143 @@
-@import 'variables';
+@import '../imports/variables';
+@import '../imports/fonts';
+@import '../imports/animate';
 
-body {
-  background-color: $white
+body { background-color: $romance; }
+
+a { text-decoration: none; }
+
+p { color: $title; }
+
+.bg-blue { background-color: $bg-blue; }
+
+.bg-white { background-color: $white; }
+
+.icon { position: absolute; margin-left: 10px; }
+
+.row { margin-bottom: 0px !important; }
+
+// MARGIN-TOP (+) //
+
+.mt20 { margin-top: 20px !important; }
+
+.mt30 { margin-top: 30px !important; }
+
+.mt35 { margin-top: 35px !important; }
+
+.mt40 { margin-top: 40px !important; }
+
+.mt50 { margin-top: 50px !important; }
+
+.mt55 { margin-top: 55px !important; }
+
+.mt60 { margin-top: 60px !important; }
+
+.mt70 { margin-top: 70px !important; }
+
+.mt80 { margin-top: 80px !important; }
+
+.mt100 { margin-top: 100px !important; }
+
+// MARGIN-TOP (-) //
+
+.mt-20 { margin-top: -20px !important; }
+
+.mt-25 { margin-top: -25px !important; }
+
+// MARGIN-BOTTOM (+) //
+
+.mb50 { margin-bottom: 50px !important; }
+
+.mb100 { margin-bottom: 100px !important; }
+
+.shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 2px;
+  padding: {
+    top: 10px;
+    bottom: 10px;
+  }
+}
+
+.button {
+  font-weight: 600;
+  font-family: $source-sans-pro;
+  text-transform: uppercase;
+  color: $white;
+  background: $green;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  height: 20px;
+  padding: {
+    left: 15px;
+    right: 15px;
+    top: 15px;
+  }
 }
 
 .header {
 
   .logo {
-    height: 35px;
+    height: 2vw;
     position: absolute;
-    left: 15px;
-    margin-top: 15px;
+    left: 25px;
+    top: 25px;
+    cursor: pointer;
+
+    @media (max-width: 1024px) {
+      height: 5vw;
+    }
+  }
+
+  .navigation {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    margin-top: -30px;
+
+    h1 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-left: 20px;
+      font-family: $source-sans-pro;
+      text-transform: uppercase;
+      color: $nav;
+      cursor: pointer;
+      display: inline-block;
+
+      &:hover {
+        color: $title;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $title;
+        transition: width .6s;
+        margin-top: 2px;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+
+    }
+
+    .btn-nav {
+      margin-left: 20px;
+      font-size: 14px;
+      height: 20px;
+      padding: {
+        left: 20px;
+        right: 20px;
+        top: 10px;
+        bottom: 32px;
+      }
+    }
   }
 
 }

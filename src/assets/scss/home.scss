@@ -1,0 +1,157 @@
+@import '../imports/variables';
+@import '../imports/fonts';
+@import '../imports/animate';
+
+
+// Styles pour la Home //
+
+.home {
+  margin-top: 150px;
+
+  h1 {
+    font-size: 26px;
+    font-family: 'Speedy' sans-serif;
+    text-transform: uppercase;
+    color: $title;
+    font-weight: 500;
+  }
+
+  h2 {
+    margin-top: 5px;
+    font-size: 26px;
+    font-family: 'Speedy' sans-serif;
+    color: $title;
+    font-weight: 700;
+  }
+
+  img { margin-top: 15px; }
+
+  .span-red { color: $red; }
+
+  .btn-red { background: $red; }
+
+  .span-purple { color: $purple; }
+
+  .btn-purple { background: $purple; }
+
+  .span-green { color: $greenSection; }
+
+  .span-green-home { color: $green; }
+
+  .btn-green { background: $greenSection; }
+
+  .btn-home {
+    padding-bottom: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 22px;
+  }
+
+  .btn-section {
+    font-size: 15px;
+    text-transform: none;
+    font-weight: 650;
+    padding: {
+      bottom: 35px;
+      right: 50px;
+      left: 25px;
+      top: 12px;
+    }
+  }
+
+  .description {
+    margin-bottom: 25px;
+  }
+
+  .support {
+    margin-top: 10px;
+    color: $text;
+    font-size: 14px;
+  }
+
+  .illustration { height: 300px; }
+
+}
+
+ // Liste des plus récentes technologies sous forme d'icones //
+
+.technology {
+  margin-top: 50px;
+  img { height: 50px; }
+  p { color: $white; }
+  p:first-child { color: $text; }
+
+  .shopify {
+    img:hover { content: url('../img/technology/shopifySelected.svg'); }
+    margin-top: 10px;
+  }
+
+  .react {
+    img:hover { content: url('../img/technology/reactSelected.svg'); }
+    margin-top: 10px;
+  }
+
+  .wordpress {
+    img:hover { content: url('../img/technology/wordpressSelected.svg'); }
+    margin-top: 10px;
+  }
+
+  .vue {
+    img:hover { content: url('../img/technology/vueSelected.svg'); }
+    margin-top: 10px;
+  }
+
+  .prestashop {
+    img:hover { content: url('../img/technology/prestashopSelected.svg'); height: 64px; margin-top: -4px;}
+    margin-top: 10px;
+  }
+
+  .angular {
+    img:hover { content: url('../img/technology/angularSelected.svg'); }
+    margin-top: 10px;
+  }
+
+  .drupal {
+    img:hover { content: url('../img/technology/drupalSelected.svg'); }
+    margin-top: 10px;
+  }
+
+  .symfony {
+    img:hover { content: url('../img/technology/symfonySelected.svg'); }
+    margin-top: 10px;
+  }
+
+  .selected {
+    cursor: pointer;
+    p {
+      display: block;
+      color: $text;
+     }
+  }
+
+}
+
+// Section avantages
+
+.avantages {
+
+  span { margin-left: 40px; }
+
+  img { height: 100px; padding-top: 15px !important; }
+
+  .box {
+    box-shadow: 0 14px 30px 0 rgba(28, 60, 125, 0.04);
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: $white;
+    margin-right: 20px !important;
+    padding: 15px !important;
+    p { color: $text; font-size: 14px; }
+
+    &:hover {
+      p { color: $title;}
+      box-shadow: 0 14px 30px 0 rgba(14, 49, 121, 0.1);
+      transform: translateY(-3px);
+    }
+  }
+}
