@@ -37,7 +37,7 @@ class Avantages extends Component {
           <div className="row mt50">
             <div className="offset-s2 col s2 box" onMouseEnter={this.hoverSuivi} onMouseLeave={this.hoverSuivi}>
               <img src={this.state.suivi ? SuiviSelected : Suivi } alt="Suivi personnalisé"/>
-              <p>Accompagnement et suivi personnalisé de votre projet.</p>
+              <p>Accompagnement et suivi personnalisé de votre projjjjet.</p>
             </div>
             <div className="col s2 box" onMouseEnter={this.hoverTechnology} onMouseLeave={this.hoverTechnology}>
               <img src={this.state.technology ? TechnologySelected : Technology } alt="Technologies récentes"/>
