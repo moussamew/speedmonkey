@@ -2,7 +2,6 @@
 @import '../imports/fonts';
 @import '../imports/animate';
 
-
 // Styles pour la Home //
 
 .home {
@@ -38,7 +37,10 @@
 
   .span-green-home { color: $green; }
 
+
   .btn-green { background: $greenSection; }
+
+  .btn-blue { background: $title; }
 
   .btn-home {
     padding-bottom: 50px;
@@ -163,5 +165,6 @@
     margin-right: 20px !important;
     padding: 15px !important;
     background-color: $white;
+    cursor: pointer;
   }
 }
