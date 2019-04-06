@@ -11,7 +11,7 @@ class Home extends Component {
 
     return (
       <div>
-        <div className="row home">
+        <div className="row home fadeIn">
            <div className="col s12 m5 offset-m1">
               <h1>Concevez, référencez et hebergez votre site web avec <span className="span-green-home">SpeedMonkey</span></h1>
               <p className="description">Chaque projet web est <strong>unique</strong>, et mérite le <strong>meilleur</strong>.

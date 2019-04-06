@@ -14,7 +14,7 @@ p { color: $title; }
 
 .icon { position: absolute; margin-left: 10px; }
 
-.row { margin-bottom: 0px !important; }
+.hidden { display: none; }
 
 // MARGIN-TOP (+) //
 
@@ -43,6 +43,8 @@ p { color: $title; }
 .mt-20 { margin-top: -20px !important; }
 
 .mt-25 { margin-top: -25px !important; }
+
+.mt-100 { margin-top: -100px !important; }
 
 // MARGIN-BOTTOM (+) //
 
